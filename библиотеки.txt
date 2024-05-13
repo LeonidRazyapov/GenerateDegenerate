@@ -1,0 +1,7 @@
+flask
+flask-admin 
+flask-login
+flask-sqlalchemy
+websockets
+mysql-connector-python
+pymysql
