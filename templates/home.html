@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Image Generation</title>
+    <link rel="stylesheet" href="/static/css/home.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<header>
+    <a href="/profile" class="headT"><h3>Перейти в профиль</h3></a>
+    <h1>Генерация изображения</h1>
+</header>
+<form method="POST">
+    <div><label>Positive: <input type="text" name="Positive"></label></div>
+    <div><label>Negative: <input type="text" name="Negative"></label></div>
+    <div><label>X: <input type="text" name="X" required></label></div>
+    <div><label>Y: <input type="text" name="Y" required></label></div>
+    <input type="submit" value="Generate">
+</form>
+<div class="image-container">
+    {% if img %}
+        <img src="/static/images/{{ img }}">
+    {% endif %}
+</div>
+<footer>
+    <p>&copy; 2024 Balakin company</p>
+</footer>
+</body>
+</html>

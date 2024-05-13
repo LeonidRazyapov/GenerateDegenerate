@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Image Generation</title>
+    <link rel="stylesheet" href="/static/css/report.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<header>
+    <h1>Сообщение об ошибке</h1>
+</header>
+<main role ='main'>
+{% if status %}
+                    <div class="status">{{ status }}</div>
+{% endif %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form method="post">
+                <div class="form-group">
+                    <label for="where-error">Укажите где ошибка:</label>
+                    <input type="text" class="form-control" id="where-error" name="where-error" required >
+                </div>
+                <div class="form-group">
+                    <label for="text">Опишите проблему:</label>
+                    <textarea type="text" class="form-control" id="text" name="text" required></textarea>
+                </div>
+                <button type="submit" class="btn">Отправить</button>
+                <a href="{{ url_for('profile') }}" class="btn">Вернуться</a>
+            </form>
+            
+        </div>
+    </div>
+</div>
+</div>
+</main>
+<footer>
+    <p>&copy; 2024 Balakin company</p>
+</footer>
+</body>
+</html>
